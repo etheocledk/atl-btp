@@ -1,32 +1,31 @@
-# React + TypeScript + Vite
+# ATL BTP – Énergies & Télécoms
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Site vitrine statique (une page) d'ATL BTP : **Performance et innovation sans frontières**.
 
-Currently, two official plugins are available:
+Stack : Vite + React + TypeScript + Tailwind CSS. Aucune API, aucun back-end.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Démarrer
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+pnpm install
+pnpm dev        # http://localhost:5173
+pnpm build      # génère le site statique dans dist/
+pnpm preview    # sert dist/ en local
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Le dossier `dist/` peut être déposé tel quel sur n'importe quel hébergement statique.
+
+## Modifier le contenu
+
+Tous les textes sont dans `src/data/site.ts` : coordonnées, chiffres clés, services,
+réalisations, partenaires. Les valeurs marquées « à compléter » sont provisoires
+(téléphone, adresse, numéro WhatsApp, chiffres, projets).
+
+- Couleurs et polices de la charte : `src/index.css` (bloc `@theme`).
+- Photos : `public/images/` (photos Unsplash provisoires, à remplacer par les vraies).
+- Logo provisoire : `src/components/Logo.tsx` et `public/favicon.svg`.
+
+## Formulaire de contact
+
+Pas de back-end pour l'instant : à l'envoi, le formulaire ouvre la messagerie du
+visiteur avec la demande pré-remplie vers l'adresse définie dans `src/data/site.ts`.
