@@ -1,6 +1,7 @@
-import Contact from './components/Contact'
-import Header from './components/Header'
 import About from './components/About'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
+import Header from './components/Header'
 import Hero from './components/Hero'
 import Innovation from './components/Innovation'
 import Partners from './components/Partners'
@@ -23,6 +24,7 @@ export default function App() {
         <Partners />
         <Contact />
       </main>
+      <Footer />
     </>
   )
 }
