@@ -45,7 +45,7 @@ export default function Services() {
 
                 <div className="flex flex-1 flex-col p-6">
                   <p className="text-graphite/75">{service.intro}</p>
-                  <ul className="mt-5 grid flex-1 gap-2.5">
+                  <ul className="mt-5 grid flex-1 content-start gap-2.5">
                     {service.items.map((item) => (
                       <li key={item} className="flex items-start gap-2.5 text-sm font-medium">
                         <Check className="mt-0.5 h-4 w-4 shrink-0 text-atl-light" aria-hidden="true" />
