@@ -1,3 +1,16 @@
+import Header from './components/Header'
+import Hero from './components/Hero'
+import { useReveal } from './hooks/useReveal'
+
 export default function App() {
-  return <main />
+  useReveal()
+
+  return (
+    <>
+      <Header />
+      <main>
+        <Hero />
+      </main>
+    </>
+  )
 }
