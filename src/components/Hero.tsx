@@ -51,12 +51,6 @@ export default function Hero() {
             >
               Nos réalisations
             </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center rounded-full px-7 py-3.5 font-semibold text-white/90 underline-offset-4 transition hover:text-gold hover:underline"
-            >
-              Nous contacter
-            </a>
           </div>
         </div>
 
