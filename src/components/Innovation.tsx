@@ -38,7 +38,7 @@ export default function Innovation() {
               return (
                 <li
                   key={item.title}
-                  className={`reveal rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur transition hover:border-gold/50 hover:bg-white/10 ${
+                  className={`reveal rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur ${
                     i === innovations.length - 1 ? 'sm:col-span-2' : ''
                   }`}
                 >

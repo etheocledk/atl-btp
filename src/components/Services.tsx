@@ -25,7 +25,7 @@ export default function Services() {
             return (
               <article
                 key={service.key}
-                className="reveal group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-gray-100 transition hover:-translate-y-1 hover:shadow-xl"
+                className="reveal flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-gray-100"
               >
                 <div className="relative h-52 overflow-hidden">
                   <img
@@ -58,7 +58,7 @@ export default function Services() {
                     className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-atl hover:text-atl-light"
                   >
                     Parler de votre projet
-                    <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                    <ArrowRight className="h-4 w-4" />
                   </a>
                 </div>
               </article>
