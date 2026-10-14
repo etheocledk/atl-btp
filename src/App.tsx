@@ -7,6 +7,7 @@ import Innovation from './components/Innovation'
 import Partners from './components/Partners'
 import Projects from './components/Projects'
 import Services from './components/Services'
+import WhatsAppButton from './components/WhatsAppButton'
 import { useReveal } from './hooks/useReveal'
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <WhatsAppButton />
     </>
   )
 }
