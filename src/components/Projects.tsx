@@ -46,7 +46,7 @@ export default function Projects() {
               <img
                 src={project.image}
                 alt={project.title}
-                className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-atl-deep via-atl-deep/30 to-transparent" />
