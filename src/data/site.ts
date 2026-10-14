@@ -110,7 +110,14 @@ export const innovations = [
   { title: 'IA & automatisation', text: 'Automatisation des sites techniques et analyse des données d’exploitation.' },
 ]
 
-export const partners = ['Huawei', 'Hikvision', 'Hanwha Vision', 'Dell Technologies', 'Grandstream', 'Dahua']
+export const partners = [
+  { name: 'Huawei', logo: '/images/partenaires/huawei.svg' },
+  { name: 'Hikvision', logo: '/images/partenaires/hikvision.svg' },
+  { name: 'Hanwha Vision', logo: '/images/partenaires/hanwha-vision.svg' },
+  { name: 'Dell Technologies', logo: '/images/partenaires/dell-technologies.svg' },
+  { name: 'Grandstream', logo: '/images/partenaires/grandstream.svg' },
+  { name: 'Dahua Technology', logo: '/images/partenaires/dahua.svg' },
+]
 
 export const budgets = [
   'Moins de 10 M FCFA',

@@ -11,15 +11,16 @@ export default function Partners() {
           intro="Des équipements reconnus mondialement pour des installations durables et performantes."
           center
         />
+      </div>
 
-        {/* Noms en texte en attendant les logos officiels fournis par les partenaires */}
-        <ul className="reveal mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-          {partners.map((name) => (
-            <li
-              key={name}
-              className="flex h-24 items-center justify-center rounded-xl border border-gray-100 bg-gray-50 px-4 text-center font-display text-base font-bold text-graphite/60 grayscale transition hover:border-atl/20 hover:bg-white hover:text-atl hover:shadow-md"
-            >
-              {name}
+      {/* Bande défilante : la liste est dupliquée pour une boucle continue */}
+      <div className="marquee reveal relative mt-14 overflow-hidden">
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent sm:w-32" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent sm:w-32" />
+        <ul className="marquee-track flex w-max items-center">
+          {[...partners, ...partners].map((p, i) => (
+            <li key={i} className="px-8 sm:px-12" aria-hidden={i >= partners.length}>
+              <img src={p.logo} alt={p.name} className="h-12 w-36 object-contain sm:h-14 sm:w-44" loading="lazy" />
             </li>
           ))}
         </ul>
