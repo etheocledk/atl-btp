@@ -2,6 +2,7 @@ import { Clock, Mail, MapPin, Phone, Send } from 'lucide-react'
 import { useState, type FormEvent } from 'react'
 import { budgets, company } from '../data/site'
 import SectionTitle from './SectionTitle'
+import Select from './Select'
 
 const inputClass =
   'w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-gray-400 focus:border-atl-light focus:ring-2 focus:ring-atl-light/20'
@@ -120,17 +121,13 @@ export default function Contact() {
                   placeholder="vous@exemple.com"
                 />
               </label>
-              <label className="grid gap-2 text-sm font-medium sm:col-span-2">
-                Budget estimatif
-                <select name="budget" className={inputClass} defaultValue="">
-                  <option value="" disabled>
-                    Sélectionnez une fourchette
-                  </option>
-                  {budgets.map((b) => (
-                    <option key={b}>{b}</option>
-                  ))}
-                </select>
-              </label>
+              <Select
+                name="budget"
+                label="Budget estimatif"
+                options={budgets}
+                placeholder="Sélectionnez une fourchette"
+                className="sm:col-span-2"
+              />
               <label className="grid gap-2 text-sm font-medium sm:col-span-2">
                 Votre projet *
                 <textarea
