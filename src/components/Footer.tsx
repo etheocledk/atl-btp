@@ -3,6 +3,9 @@ import { company, navLinks, services } from '../data/site'
 import Logo from './Logo'
 
 const year = new Date().getFullYear()
+const footerLinks = navLinks.filter((l) =>
+  ['#a-propos', '#services', '#realisations', '#contact'].includes(l.href),
+)
 
 export default function Footer() {
   return (
@@ -21,7 +24,7 @@ export default function Footer() {
         <div>
           <h3 className="text-sm font-bold uppercase tracking-wider text-white">Navigation</h3>
           <ul className="mt-5 grid gap-2.5 text-sm">
-            {navLinks.map((l) => (
+            {footerLinks.map((l) => (
               <li key={l.href}>
                 <a href={l.href} className="hover:text-gold">
                   {l.label}
@@ -34,10 +37,10 @@ export default function Footer() {
         <div>
           <h3 className="text-sm font-bold uppercase tracking-wider text-white">Expertises</h3>
           <ul className="mt-5 grid gap-2.5 text-sm">
-            {services.flatMap((s) => s.items.slice(0, 2)).map((item) => (
-              <li key={item}>
+            {services.map((s) => (
+              <li key={s.key}>
                 <a href="#services" className="hover:text-gold">
-                  {item}
+                  {s.title}
                 </a>
               </li>
             ))}
@@ -66,11 +69,10 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-6 text-xs sm:flex-row sm:justify-between sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 py-6 text-xs sm:px-6 lg:px-8">
           <p>
             © {year} {company.fullName}. Tous droits réservés.
           </p>
-          <p>Photos : Unsplash</p>
         </div>
       </div>
     </footer>
