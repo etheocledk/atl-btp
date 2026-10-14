@@ -5,15 +5,14 @@ type Props = { value: number; prefix?: string; suffix?: string; duration?: numbe
 /** Compteur qui s'anime de 0 à `value` lorsqu'il devient visible. */
 export default function Counter({ value, prefix = '', suffix = '', duration = 1600 }: Props) {
   const ref = useRef<HTMLSpanElement>(null)
+  const [reducedMotion] = useState(
+    () => window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+  )
   const [current, setCurrent] = useState(0)
 
   useEffect(() => {
     const el = ref.current
-    if (!el) return
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setCurrent(value)
-      return
-    }
+    if (!el || reducedMotion) return
     let frame = 0
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -35,12 +34,12 @@ export default function Counter({ value, prefix = '', suffix = '', duration = 16
       observer.disconnect()
       cancelAnimationFrame(frame)
     }
-  }, [value, duration])
+  }, [value, duration, reducedMotion])
 
   return (
     <span ref={ref} className="tabular-nums">
       {prefix}
-      {current}
+      {reducedMotion ? value : current}
       {suffix}
     </span>
   )

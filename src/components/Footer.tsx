@@ -2,9 +2,9 @@ import { Mail, MapPin, Phone } from 'lucide-react'
 import { company, navLinks, services } from '../data/site'
 import Logo from './Logo'
 
-export default function Footer() {
-  const year = new Date().getFullYear()
+const year = new Date().getFullYear()
 
+export default function Footer() {
   return (
     <footer className="bg-atl-deep text-white/70">
       <div className="h-1 bg-gradient-to-r from-atl-light via-gold to-atl-light" />
