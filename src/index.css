@@ -23,6 +23,15 @@ body {
   @apply bg-white font-sans text-graphite antialiased;
 }
 
+/* Tailwind v4 ne met plus de curseur main sur les boutons par défaut */
+@layer base {
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']),
+  [role='option'] {
+    cursor: pointer;
+  }
+}
+
 h1,
 h2,
 h3,
