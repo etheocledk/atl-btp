@@ -103,7 +103,7 @@ export default function Contact() {
                   type="tel"
                   required
                   autoComplete="tel"
-                  pattern="[+0-9 ()\-]{8,20}"
+                  pattern="[+0-9 \(\)\-]{8,20}"
                   title="Numéro de téléphone (chiffres, espaces, +)"
                   className={inputClass}
                   placeholder="+227 ..."
