@@ -31,7 +31,7 @@ export default function Services() {
                   <img
                     src={service.image}
                     alt=""
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.02]"
+                    className="h-full w-full object-cover"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-atl-deep/80 to-transparent" />
