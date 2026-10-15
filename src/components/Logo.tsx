@@ -15,7 +15,14 @@ export default function Logo({ light = false, className = '' }: Props) {
           fill={light ? '#003E8A' : '#ffffff'}
           fillRule="evenodd"
         />
-        <path d="M37 10 l-6 12 h5 l-3 10 9-14 h-5 l3-8 Z" fill="#F5B400" />
+        <path
+          d="M37 10 l-6 12 h5 l-3 10 9-14 h-5 l3-8 Z"
+          fill="#F5B400"
+          stroke={light ? '#ffffff' : '#003E8A'}
+          strokeWidth="2.5"
+          strokeLinejoin="round"
+          paintOrder="stroke"
+        />
       </svg>
       <span className="leading-tight">
         <span
