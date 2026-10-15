@@ -7,8 +7,6 @@ import Select from './Select'
 const inputClass =
   'w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-gray-400 focus:border-atl-light focus:ring-2 focus:ring-atl-light/20'
 
-const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(company.address)}`
-
 export default function Contact() {
   const [sent, setSent] = useState(false)
 
@@ -35,7 +33,7 @@ export default function Contact() {
   }
 
   const details = [
-    { icon: MapPin, label: 'Adresse', value: company.address, href: mapsUrl },
+    { icon: MapPin, label: 'Implantations', value: company.address },
     { icon: Phone, label: 'Téléphone', value: company.phone },
     { icon: Mail, label: 'E-mail', value: company.email, href: `mailto:${company.email}` },
     { icon: Clock, label: 'Horaires', value: company.hours },
@@ -107,7 +105,7 @@ export default function Contact() {
                   pattern="[+0-9 \(\)\-]{8,20}"
                   title="Numéro de téléphone (chiffres, espaces, +)"
                   className={inputClass}
-                  placeholder="+227 ..."
+                  placeholder="+229 / +227 ..."
                 />
               </label>
               <label className="grid gap-2 text-sm font-medium">

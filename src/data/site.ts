@@ -5,9 +5,9 @@ export const company = {
   name: 'ATL BTP',
   fullName: 'ATL BTP – Énergies & Télécoms',
   tagline: 'Performance et innovation sans frontières',
-  city: 'Niamey – Niger',
-  address: 'Niamey, Niger', // à compléter
-  phone: '+227 XX XX XX XX', // à compléter
+  city: 'Bénin – Niger',
+  address: 'Bénin · Niger', // adresses précises à compléter
+  phone: '+229 XX XX XX XX · +227 XX XX XX XX', // à compléter
   email: 'contact@atlbtp.com',
   whatsapp: '', // numéro international sans « + » ni espaces, ex. 22790000000
   hours: 'Lun – Ven : 8h00 – 18h00 · Sam : 9h00 – 13h00',
@@ -27,7 +27,7 @@ export const navLinks = [
 export const stats = [
   { value: 120, prefix: '+', suffix: '', label: 'Projets réalisés' },
   { value: 80, prefix: '+', suffix: '', label: 'Ingénieurs & techniciens' },
-  { value: 6, prefix: '', suffix: '', label: 'Pays couverts' },
+  { value: 2, prefix: '', suffix: '', label: 'Pays couverts' },
   { value: 10, prefix: '', suffix: ' ans', label: "D'expérience" },
 ]
 
@@ -92,14 +92,14 @@ export type ProjectCategory = Exclude<(typeof projectCategories)[number], 'Tous'
 
 // Réalisations d'exemple, à remplacer par les vrais projets.
 export const projects: { title: string; place: string; category: ProjectCategory; image: string }[] = [
-  { title: 'Centrale solaire photovoltaïque', place: 'Région de Tillabéri', category: 'Énergie', image: '/images/centrale-solaire.jpg' },
-  { title: 'Déploiement de fibre optique', place: 'Niamey', category: 'Télécoms', image: '/images/reseau-ip.jpg' },
-  { title: 'Construction de bâtiment administratif', place: 'Niamey', category: 'BTP', image: '/images/equipe-chantier.jpg' },
-  { title: 'Salle serveurs & datacenter', place: 'Niamey', category: 'Smart Infrastructure', image: '/images/datacenter.jpg' },
-  { title: 'Électrification de site industriel', place: 'Agadez', category: 'Énergie', image: '/images/industriel.jpg' },
-  { title: 'Études & ingénierie de réseau', place: 'Maradi', category: 'BTP', image: '/images/etudes.jpg' },
-  { title: 'Alimentation solaire de bâtiment public', place: 'Dosso', category: 'Énergie', image: '/images/solaire-site.jpg' },
-  { title: 'Vidéosurveillance & contrôle d’accès', place: 'Zinder', category: 'Smart Infrastructure', image: '/images/iot.jpg' },
+  { title: 'Centrale solaire photovoltaïque', place: 'Région de Tillabéri, Niger', category: 'Énergie', image: '/images/centrale-solaire.jpg' },
+  { title: 'Déploiement de fibre optique', place: 'Cotonou, Bénin', category: 'Télécoms', image: '/images/reseau-ip.jpg' },
+  { title: 'Construction de bâtiment administratif', place: 'Niamey, Niger', category: 'BTP', image: '/images/equipe-chantier.jpg' },
+  { title: 'Salle serveurs & datacenter', place: 'Cotonou, Bénin', category: 'Smart Infrastructure', image: '/images/datacenter.jpg' },
+  { title: 'Électrification de site industriel', place: 'Agadez, Niger', category: 'Énergie', image: '/images/industriel.jpg' },
+  { title: 'Études & ingénierie de réseau', place: 'Parakou, Bénin', category: 'BTP', image: '/images/etudes.jpg' },
+  { title: 'Alimentation solaire de bâtiment public', place: 'Porto-Novo, Bénin', category: 'Énergie', image: '/images/solaire-site.jpg' },
+  { title: 'Vidéosurveillance & contrôle d’accès', place: 'Niamey, Niger', category: 'Smart Infrastructure', image: '/images/iot.jpg' },
 ]
 
 export const innovations = [

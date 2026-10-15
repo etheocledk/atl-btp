@@ -27,7 +27,7 @@ export default function About() {
             <SectionTitle
               eyebrow="À propos"
               title="Un partenaire technique fiable pour vos grands projets"
-              intro="ATL BTP – Énergies & Télécoms est une entreprise basée à Niamey, spécialisée dans le BTP, les infrastructures énergétiques et les télécommunications. Nous accompagnons les acteurs publics et privés, des études à la mise en service."
+              intro="ATL BTP – Énergies & Télécoms est une entreprise présente au Bénin et au Niger, spécialisée dans le BTP, les infrastructures énergétiques et les télécommunications. Nous accompagnons les acteurs publics et privés, des études à la mise en service."
             />
 
             <div className="mt-8 grid gap-5 sm:grid-cols-3">
